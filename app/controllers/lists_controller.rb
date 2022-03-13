@@ -7,10 +7,10 @@ class ListsController < ApplicationController
     list = List.new(list_params)
     list.save
     redirect_to '/'
-
   end
 
   def index
+    @lists = List.all
   end
 
   def show
